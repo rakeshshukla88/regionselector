@@ -1,0 +1,15 @@
+<div class="card mt-5">
+    <div class="card-body">
+        <h5 class="card-title">{{titleString}}</h5>
+        <div class="card-text">
+            <form class="form-inline">
+                <div class="form-group">
+                    <select class="browser-default custom-select form-control ml-2 mr-2" (change)="selected($event)">
+                        <option value="{{country.id}}" [selected]="country.id==selectedQuery" *ngFor="let country of queryData;">{{country.title}}</option>
+                        
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

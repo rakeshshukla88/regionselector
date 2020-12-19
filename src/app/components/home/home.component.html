@@ -1,0 +1,8 @@
+<div class="main-content">
+     <query-selector  [titleString]="regionTitle" [queryData]="regionList" [selectedData]="selectedRegion" (onQuerySelect) = "onRegionSelect($event)">
+     </query-selector>
+     
+    <query-selector *ngIf="selectedRegion!=''" [titleString]="countryTitle" [queryData]="countryList" [selectedData]="selectedCountry" (onQuerySelect) = "onCountrySelect($event)">
+    </query-selector>
+    <country-detail [selectedCountry]="selectedCountry" *ngIf="selectedCountry!=''"></country-detail>
+</div>

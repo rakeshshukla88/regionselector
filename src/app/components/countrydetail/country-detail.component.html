@@ -1,0 +1,33 @@
+<div class="card mt-5">
+    <div class="card-body">
+        <h2 class="card-title">Notes List</h2>
+        <div class="card-text">
+            <table class="table table-striped">
+                <tr>
+                    <th>Name</th>
+                    <td><img [src]="country?.flag" class="mr-2" style="width: 20px">{{country?.name}}</td>
+                </tr>
+                <tr>
+                    <th>Capital</th>
+                    <td>{{country?.capital}}</td>
+                </tr>
+                <tr>
+                    <th>Population</th>
+                    <td>{{country?.population}}</td>
+                </tr>
+                <tr>
+                    <th>Currencies</th>
+                    <td>
+                        <ul>
+                            <ol *ngFor="let currency of country.currencies;">
+                                {{currency.name}} ({{currency.code}})
+                            </ol>
+                        </ul>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+         
+    </div>
+</div>
